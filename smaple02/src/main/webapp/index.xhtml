@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Sample02 input</title>
+    </h:head>
+    <h:body>
+        <h1>名簿データの作成</h1>
+        <h:form>
+            番号：<h:inputText value="#{topPage.number}" /><br/>
+            氏名：<h:inputText value="#{topPage.name}" /><br/>
+            <!--氏名：<h:inputText value="#{topPage.test()}" /><br/>-->
+            <h:commandButton value="送信"  action="#{topPage.next}"/>
+        </h:form>
+    </h:body>
+</html>
+<!--12行目の氏名：<h:inputText value="#{topPage.name}" /><br/>を
+name2()とかにして、TopPage.javaでname2()を作ると、
+input.xhtmlは不可、output.xhtmlは可。
+input.xhtmlでも、returnでStringにすると表示するところまではできる。
+が、送信は不可。
+なぜ出来ないのだろう？topPage.nameもtopPage.test()も同じ気がするが…？
+TopPageでtopPage.nameの初期値を初期化と同時に設定すれば出来た。-->
