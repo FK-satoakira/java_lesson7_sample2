@@ -18,6 +18,8 @@ public class TopPage implements Serializable{
 
 //ここはpublic void test()も、public String test()も、可
 		return "output.xhtml";
+//                return "https://www.google.com/?hl=ja";は不可でった
+//                多分、プロジェクト内のファイルでないとだめなのだろう
 	}
         public String test(){
             this.name = "test";
